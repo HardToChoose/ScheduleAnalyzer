@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="a6441b10-0ba0-4de1-b13d-474ab5968255"
+  name="GraphLogic"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="bbb85dd5-97a7-471a-992f-f29f530f0723"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DGraphLogic"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="8bebccf6-d188-41da-aaa0-72421a58b08f"
+        LastKnownName="Entities"
+        LastKnownLocation="Package4_1916.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="7658671c-99b5-439b-b152-2df2008b0bcc"
+        LastKnownName="Graphs"
+        LastKnownLocation="Package2_1938.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="9cc3e917-a6cc-4d4f-befe-adc3e4465387"
+        LastKnownName="Layouts"
+        LastKnownLocation="Package6_1951.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="cb841308-f4ff-478d-be1d-0f12bb32baf6"
+        LastKnownName="Random"
+        LastKnownLocation="Package8_1951.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

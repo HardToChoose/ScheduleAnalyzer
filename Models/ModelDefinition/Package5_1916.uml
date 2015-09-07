@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="2363cbd7-c9b8-4ecf-9a75-cc2b020e7032"
+  name="Statistics"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="d09660a1-1cd3-46ae-8a3a-9c71a7497006"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DTaskPlanning.Queueing.Statistics"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="501367a0-1495-44bf-b609-cd633f5bb410"
+        name="TaskGraphStat"
+        visibility="Private"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="12ab7c34-c4a6-4f13-ad63-d92c53293a2d"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Statistics Type%3D(Name%3DTaskGraphStat ArrayRank%3D2 ParentType%3DTaskGraphStat)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="c64b4cd8-5795-4b17-9060-d6af22df6829"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c75886c4-bb8a-45e3-b4fa-4bd6b2840f6c">
+                <propertyInstance
+                  Id="9702753e-9e7a-4000-941a-3a77fb4c6004"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f6c2ce9c-69ac-4adb-b0a3-ebefd9768bda">
+                <propertyInstance
+                  Id="f94ed1f9-fece-490f-a2a5-b1278568d2fe"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b2a4c27a-5863-4d29-b782-8e63a3718460">
+                <propertyInstance
+                  Id="611546b0-24ff-42c4-b650-efc54bdc603b"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fd1f6872-2cd0-4fbb-a7fb-17a384bfbd42">
+                <propertyInstance
+                  Id="47e9f403-eb2b-4aa0-ab2f-914a5451a79d"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f86279df-30df-4423-9cd8-5c07c62c02c2">
+                <propertyInstance
+                  Id="55b8b1a2-324d-48db-85f3-aeffa8d6efa0"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

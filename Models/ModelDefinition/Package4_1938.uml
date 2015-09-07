@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="1318e923-5f1d-47aa-8dee-d6c2f65a3347"
+  name="Helpers"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="9c20c805-665e-42c3-9715-d234130e55f2"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DTaskPlanning.JobAssignment.Simulation.Helpers"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="f3bf5960-79f2-4970-be0c-ee23e8174ed1"
+        name="FastestRouteFinder"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="0b86401a-cc42-41db-9454-83fa24037aea"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.JobAssignment.Simulation.Helpers Type%3DFastestRouteFinder"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="3719fccb-7773-4bb2-8c95-eafb477fde52"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a38dc7ab-842f-4bcc-afad-7fa39606cfd4">
+                <propertyInstance
+                  Id="a3175af4-e5ac-4f79-b5cf-e4312b4219d1"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="46b4545f-e727-47fa-92b7-0f3b844285bf">
+                <propertyInstance
+                  Id="c4ff4593-c5f8-4ee8-9c2f-015808514baa"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ce77d274-45b6-4514-a787-9fa4a38c4c4e">
+                <propertyInstance
+                  Id="9592b846-cdd7-4441-93ff-4d67b835b9b4"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="937cf400-ceb4-419c-bbf3-63abf4e1405c">
+                <propertyInstance
+                  Id="1cfc0682-0f95-491c-8ce8-e89fa95325e1"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="45ddad6e-270b-404d-a3b9-7669a9266a1a">
+                <propertyInstance
+                  Id="4acfa00c-29ad-4a63-8f9a-5618d3d8c967"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="8c04a4b4-8c97-4ad1-a611-c48785c0ac01"
+        name="RouteTable"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="4f1fffa6-7457-4395-9514-652eae0398d9"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.JobAssignment.Simulation.Helpers Type%3DRouteTable"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="3d56c224-cf8a-4ec0-a1fe-526515bbf68f"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b8a162a2-494c-40e3-aa1f-05ab2f08b495">
+                <propertyInstance
+                  Id="86f27216-1547-4def-b920-a1f42e3ca026"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="79662070-1f91-4a55-b4d2-73dabfe08205">
+                <propertyInstance
+                  Id="3586c803-2275-469a-88a1-efd388e870da"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1d7eaa8c-6484-4f23-a779-4dd9c73254a3">
+                <propertyInstance
+                  Id="186994f7-9c4c-401e-9572-2e93ceebc68c"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b28a1f02-2c0e-45e3-a8f8-57a99d4c79c8">
+                <propertyInstance
+                  Id="6834c70f-e14e-42ca-8339-472509a65049"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d5b4864e-ed39-4e5e-ae48-defcec9676f6">
+                <propertyInstance
+                  Id="da070f52-6072-41fa-a707-c5c79016b6e3"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

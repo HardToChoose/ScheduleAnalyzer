@@ -1,0 +1,455 @@
+﻿<Window x:Class="MainApp.Views.MainWindow"
+        x:Name="Self"
+        
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                
+        xmlns:local="clr-namespace:MainApp.Views"
+        
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        xmlns:pi="clr-namespace:Microsoft.Practices.Prism.Interactivity.InteractionRequest;assembly=Microsoft.Practices.Prism.Interactivity"
+        xmlns:pc="clr-namespace:Microsoft.Practices.Prism.Commands;assembly=Microsoft.Practices.Prism.Mvvm"
+        xmlns:mvvm="clr-namespace:Microsoft.Practices.Prism.Mvvm;assembly=Microsoft.Practices.Prism.Mvvm.Desktop"    
+        
+        xmlns:glib="clr-namespace:GraphVisual.Controls;assembly=GraphVisual"
+        xmlns:gvis="clr-namespace:GraphVisual;assembly=GraphVisual"
+        
+        xmlns:glay="clr-namespace:GraphLogic.Layouts;assembly=GraphLogic"
+        xmlns:gle="clr-namespace:GraphLogic.Entities;assembly=GraphLogic"
+        xmlns:glg="clr-namespace:GraphLogic.Graphs;assembly=GraphLogic"  
+        
+        xmlns:ctrl="clr-namespace:UI.Controls;assembly=UI"
+        xmlns:conv="clr-namespace:UI.Converters;assembly=UI"
+        
+        Title="Планувальник задач для MPP систем"
+        WindowStartupLocation="CenterScreen"
+        
+        MinHeight="640"
+        MinWidth="560"
+        SizeToContent="WidthAndHeight"
+        
+        mvvm:ViewModelLocator.AutoWireViewModel="True">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/GraphVisual;component/Resources/LayoutIcons.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate x:Key="OperationVertex" DataType="gle:Operation">
+                <Border x:Name="HightlightBorder"
+                        BorderBrush="Transparent"
+                        BorderThickness="4"
+                        CornerRadius="34,34,34,34">
+                        <Border
+                            BorderBrush="Black"
+                            BorderThickness="3"
+                            CornerRadius="30,30,30,30"
+                            Background="WhiteSmoke">
+                            <Grid Width="60" Height="60">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="5*" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="4*" />
+                                </Grid.RowDefinitions>
+                                <TextBlock
+                                    Grid.Row="0"
+                                    Text="{Binding ID}"
+
+                                    HorizontalAlignment="Center"
+                                    FontSize="18"
+                                    Padding="4" />
+                                <Line
+                                    Grid.Row="1"
+                                    Stroke="Black"
+                                    StrokeThickness="4"
+                        
+                                    X1="0" Y1="0"
+                                    X2="100" Y2="0" />
+                                <TextBlock
+                                    Grid.Row="2"
+                                    Text="{Binding Complexity}"
+                    
+                                    HorizontalAlignment="Center"
+                                    FontSize="15"
+                                    Padding="4,2,4,4" />
+                            </Grid>
+                        </Border>
+                    </Border>
+                <DataTemplate.Triggers>
+                    <DataTrigger Binding="{Binding IsMouseOver, RelativeSource={RelativeSource AncestorType=glib:VertexControl}}" Value="True">
+                        <Setter TargetName="HightlightBorder" Property="BorderBrush" Value="SkyBlue" />
+                    </DataTrigger>
+                    <DataTrigger Binding="{Binding IsSelected, RelativeSource={RelativeSource AncestorType=glib:VertexControl}}" Value="True">
+                        <Setter TargetName="HightlightBorder" Property="BorderBrush" Value="SkyBlue" />
+                    </DataTrigger>
+                </DataTemplate.Triggers>
+            </DataTemplate>
+
+            <DataTemplate x:Key="OperationVertex_old" DataType="gle:Operation">
+                <StackPanel
+                    Orientation="Horizontal">
+                    <Border x:Name="HightlightBorder"
+                        BorderBrush="Transparent"
+                        BorderThickness="4"
+                        CornerRadius="34,34,34,34">
+                        <Border
+                            BorderBrush="Black"
+                            BorderThickness="3"
+                            CornerRadius="30,30,30,30"
+                            Background="WhiteSmoke">
+                            <Grid Width="60" Height="60">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="5*" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="4*" />
+                                </Grid.RowDefinitions>
+                                <TextBlock
+                                    Grid.Row="0"
+                                    Text="{Binding ID}"
+
+                                    HorizontalAlignment="Center"
+                                    FontSize="18"
+                                    Padding="4" />
+                                <Line
+                                    Grid.Row="1"
+                                    Stroke="Black"
+                                    StrokeThickness="4"
+                        
+                                    X1="0" Y1="0"
+                                    X2="100" Y2="0" />
+                                <TextBlock
+                                    Grid.Row="2"
+                                    Text="{Binding Type}"
+                    
+                                    HorizontalAlignment="Center"
+                                    FontSize="15"
+                                    Padding="4,2,4,4" />
+                            </Grid>
+                        </Border>
+                    </Border>
+                    <TextBlock
+                        Text="{Binding Complexity}"
+                        TextDecorations="Underline"
+                        FontSize="15"
+                    
+                        Padding="6"
+                        VerticalAlignment="Center" />
+                </StackPanel>
+                <DataTemplate.Triggers>
+                    <DataTrigger Binding="{Binding IsMouseOver, RelativeSource={RelativeSource AncestorType=glib:VertexControl}}" Value="True">
+                        <Setter TargetName="HightlightBorder" Property="BorderBrush" Value="SkyBlue" />
+                    </DataTrigger>
+                    <DataTrigger Binding="{Binding IsSelected, RelativeSource={RelativeSource AncestorType=glib:VertexControl}}" Value="True">
+                        <Setter TargetName="HightlightBorder" Property="BorderBrush" Value="SkyBlue" />
+                    </DataTrigger>
+                </DataTemplate.Triggers>
+            </DataTemplate>
+
+            <DataTemplate x:Key="ProcessorVertex" DataType="gle:Processor">
+                <Border x:Name="HightlightBorder"
+                    BorderBrush="Transparent"
+                    BorderThickness="4"
+                    CornerRadius="13,13,13,13">
+                    <Border
+                        BorderBrush="Black"
+                        BorderThickness="3"
+                        CornerRadius="10,10,10,10"
+                        Background="WhiteSmoke">
+
+                        <Grid Width="60" Height="60">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="5*" />
+                                <RowDefinition Height="3* "/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5*" />
+                                <ColumnDefinition Width="3*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Canvas Grid.RowSpan="2" Grid.ColumnSpan="2">
+                                <Line X1="20" Y1="62" X2="62" Y2="20"
+                                    Stroke="Black"
+                                    StrokeThickness="2" />
+                            </Canvas>
+
+                            <TextBlock
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                                            
+                                Margin="3"
+                                FontSize="18"
+                                                            
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Bottom"
+                                                            
+                                Text="{Binding ID}" />
+                            <TextBlock
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                                            
+                                Padding="3"
+                                FontSize="14"
+                                                            
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                                            
+                                Text="{Binding Performance}" />
+                        </Grid>
+                    </Border>
+                </Border>
+                <DataTemplate.Triggers>
+                    <DataTrigger Binding="{Binding IsMouseOver, RelativeSource={RelativeSource AncestorType=glib:VertexControl}}" Value="True">
+                        <Setter TargetName="HightlightBorder" Property="BorderBrush" Value="SkyBlue" />
+                    </DataTrigger>
+                    <DataTrigger Binding="{Binding IsSelected, RelativeSource={RelativeSource AncestorType=glib:VertexControl}}" Value="True">
+                        <Setter TargetName="HightlightBorder" Property="BorderBrush" Value="SkyBlue" />
+                    </DataTrigger>
+                </DataTemplate.Triggers>
+            </DataTemplate>
+
+            <DataTemplate x:Key="WeightedEdgeLabel" DataType="glg:WeightedEdge">
+                <TextBlock
+                    Text="{Binding Weight, StringFormat={}{0:0.##}}"
+                    Background="White" />
+            </DataTemplate>
+
+            <local:TaskGenerationDialog x:Key="TaskGen" />
+
+            <glay:GridLayout x:Key="GridLayout" />
+            <glay:TreeLayout x:Key="TreeLayout" />
+
+            <ctrl:OperationValueEditor x:Key="OperationEditor" />
+            <ctrl:ProcessorValueEditor x:Key="ProcessorEditor" />
+            <ctrl:EdgeWeightEditor x:Key="EdgeWeightEditor" />
+
+            <conv:BoolToBrushConverter x:Key="BoolToBrush" />
+
+            <Style x:Key="TaskGraphEditor" TargetType="glib:GraphEditor">
+                <Style.Resources>
+                    <Style TargetType="glib:VertexControl">
+                        <Setter Property="DataTemplate" Value="{StaticResource OperationVertex}" />
+                    </Style>
+                    <Style TargetType="glib:EdgeControl">
+                        <Setter Property="LabelTemplate" Value="{StaticResource WeightedEdgeLabel}" />
+                    </Style>
+                </Style.Resources>
+            </Style>
+
+            <Style x:Key="ProcessorGraphEditor" TargetType="glib:GraphEditor">
+                <Style.Resources>
+                    <Style TargetType="glib:VertexControl">
+                        <Setter Property="DataTemplate" Value="{StaticResource ProcessorVertex}" />
+                    </Style>
+                    <Style TargetType="glib:EdgeControl">
+                        <Setter Property="LabelTemplate" Value="{StaticResource WeightedEdgeLabel}" />
+                    </Style>
+                </Style.Resources>
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <TabControl
+            Grid.ColumnSpan="2">
+            <TabItem
+                Header="Граф КС">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        
+                        HorizontalAlignment="Stretch"
+                        Orientation="Horizontal">
+                        <Button
+                            Content="Порівняти алгоритми"
+                            FontWeight="SemiBold"
+                        
+                            Margin="5,7,5,3"
+                            Padding="8,5,8,5"
+                        
+                            Click="CompareAlgorithms_Click"/>
+                        <Button
+                            x:Name="AssignJobs"
+                            Content="Призначити роботи"
+                            FontWeight="SemiBold"
+                        
+                            Margin="5,7,5,3"
+                            Padding="8,5,8,5"
+                        
+                            Click="AssignJobsButton_Click" />
+                        <ComboBox
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Center"
+                            Margin="5,7,5,3"
+                            
+                            IsReadOnly="True"
+                            IsEditable="False"
+                            
+                            SelectedIndex="0"
+                            ItemsSource="{Binding JobAssignmentAlgorithms, Mode=OneTime}"
+                            SelectedItem="{Binding SelectedJobAssignmentAlgorithm, Mode=OneWayToSource}">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock HorizontalAlignment="Stretch" Text="{Binding AlgorithmID}" />
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                    </StackPanel>
+                    
+                    <StackPanel
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        
+                        Orientation="Horizontal"
+                        
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Right">
+                        <TextBlock
+                            HorizontalAlignment="Right"
+                        
+                            Margin="0,8,4,8"
+                            Text="Зв'язність:" />
+                        <Ellipse
+                            StrokeThickness="2"
+                            Stroke="#FF555555"
+                        
+                            Margin="5"
+                            VerticalAlignment="Stretch"
+                        
+                            Width="{Binding ActualHeight, RelativeSource={RelativeSource Self}}"
+                            Fill="{Binding ProcessorGraph.IsConnected, Converter={StaticResource BoolToBrush}}" />
+                    </StackPanel>
+
+                    <glib:GraphEditor
+                        x:Name="PcsEditor"
+                        Grid.Row="1"
+                        Grid.ColumnSpan="3"
+                        
+                        Style="{StaticResource ProcessorGraphEditor}"
+                        Graph="{Binding ProcessorGraph}"
+                    
+                        EdgeLabelEditor="{StaticResource EdgeWeightEditor}"
+                        VertexDataEditor="{StaticResource ProcessorEditor}">
+                        <glib:GraphEditor.GraphInfo>
+                            <gvis:GraphInfo
+                                VertexDataType="gle:Processor"
+                                Layout="{StaticResource GridLayout}"
+                                LayoutIcon="{StaticResource GridIcon}"
+                                FileExtensions="Processor element graph (.peg) | *.peg" />
+                        </glib:GraphEditor.GraphInfo>
+                    </glib:GraphEditor>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Граф задач">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        
+                        HorizontalAlignment="Stretch"
+                        Orientation="Horizontal">
+                        <Button  
+                            Content="Згенерувати"
+                            FontWeight="SemiBold"
+                        
+                            Margin="5,7,5,3"
+                            Padding="8,5,8,5"
+                        
+                            Click="GenerateTaskGraphButton_Click" />
+                        <Button
+                            x:Name="MakeQueueButton"
+                            
+                            Content="Сформувати чергу"
+                            FontWeight="SemiBold"
+                        
+                            Margin="5,7,5,3"
+                            Padding="8,5,8,5"
+                        
+                            Click="MakeQueueButton_Click"
+                            Command="{Binding MakeQueueCommand}" />
+                        <ComboBox
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Center"
+                            Margin="5,7,5,3"
+                            
+                            IsReadOnly="True"
+                            IsEditable="False"
+                            
+                            SelectedIndex="0"
+                            ItemsSource="{Binding QueueingAlgorithms, Mode=OneTime}"
+                            SelectedItem="{Binding SelectedQueueingAlgorithm, Mode=OneWayToSource}">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock HorizontalAlignment="Stretch" Text="{Binding Name}" />
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                    </StackPanel>
+
+                    <StackPanel
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        
+                        Orientation="Horizontal"
+                        
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Right">
+
+                        <TextBlock
+                            Text="Ациклічність:"
+                            Margin="0,8,4,8"
+                            VerticalAlignment="Center" />
+                        <Ellipse                           
+                            StrokeThickness="2"
+                            Stroke="#FF555555"
+                        
+                            Margin="5"
+                            VerticalAlignment="Stretch"
+                        
+                            Width="{Binding ActualHeight, RelativeSource={RelativeSource Self}}"
+                            Fill="{Binding TaskGraph.IsAcyclic, Converter={StaticResource BoolToBrush}}" />
+                    </StackPanel>
+
+                    <glib:GraphEditor
+                        x:Name="TaskEditor"
+                        Grid.Row="1"
+                        Grid.ColumnSpan="3"
+                        
+                        Style="{StaticResource TaskGraphEditor}"
+                        Graph="{Binding TaskGraph}"
+                    
+                        EdgeLabelEditor="{StaticResource EdgeWeightEditor}"
+                        VertexDataEditor="{StaticResource OperationEditor}">
+                        <glib:GraphEditor.GraphInfo>
+                            <gvis:GraphInfo
+                                VertexDataType="gle:Operation"           
+                                Layout="{StaticResource TreeLayout}"
+                                LayoutIcon="{StaticResource TreeIcon}"
+                                FileExtensions="Task graph (.tag) | *.tag" />
+                        </glib:GraphEditor.GraphInfo>
+                    </glib:GraphEditor>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="3d669915-6477-4669-9ed8-09b760e55799"
+  name="Queueing"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="c32e4a73-bb93-49c5-b727-7a4cc01a5c90"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DTaskPlanning.Queueing"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="94082f49-143b-4f79-b3e7-4158bc1e098d"
+        LastKnownName="Algorithms"
+        LastKnownLocation="Package2_1832.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="eca78452-d75b-4ca6-9b7b-8d060e2d65de"
+        name="OperationQueue"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="48f5d013-5073-4b10-bbd0-deb67fce5907"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing Type%3DOperationQueue"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="2b7c96a9-5a80-4612-a0eb-19c5289a5b18"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="37dccdf0-3ef9-4494-9df8-e759f4884b84">
+                <propertyInstance
+                  Id="0335caac-fa25-45e2-97d3-6bc9a1ffb0d0"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f87c0b44-27f0-4c83-8509-979df78db92d">
+                <propertyInstance
+                  Id="4fe33ecd-5f34-4066-8998-fc791ed53aa7"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2f73f92f-848e-49b0-bc48-30508bb62168">
+                <propertyInstance
+                  Id="1beca5f6-3aeb-449e-aae0-33345bc1d629"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="300b4ad7-f09a-4ad1-88cf-f9dd6d389203">
+                <propertyInstance
+                  Id="28474f9c-76d4-452f-a72f-728f66521cff"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="83e6b714-964b-462c-a2a1-c1857d25fa6d">
+                <propertyInstance
+                  Id="15dfdb5c-2975-47cb-b3bd-0ad269d967f2"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="2363cbd7-c9b8-4ecf-9a75-cc2b020e7032"
+        LastKnownName="Statistics"
+        LastKnownLocation="Package5_1916.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

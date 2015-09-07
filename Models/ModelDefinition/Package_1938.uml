@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="3b22c200-d2e9-4da4-829d-ff42c3bf015f"
+  name="JobAssignment"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="9d258842-88fe-48ab-be43-e4ed4940efe9"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DTaskPlanning.JobAssignment"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="655c95a0-b175-443b-b98e-1ea07a4fc7ad"
+        LastKnownName="Algorithms"
+        LastKnownLocation="Package1_1938.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="da72bd74-bba3-40c2-8fd4-022ae45fe4bd"
+        name="Schedule"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="91cac16d-1db1-4dc8-99bf-ef459a5305ab"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.JobAssignment Type%3DSchedule"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="fee26b9c-bba7-45dd-9e7f-a054f3b4b68e"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1f45d6de-ede9-4574-9506-cb004adbbdc1">
+                <propertyInstance
+                  Id="24d07bd8-7e0a-452e-aaa0-68476d4921bc"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9875eedc-5ce7-4f76-b3c4-193b7b9e5da4">
+                <propertyInstance
+                  Id="a0362d72-534b-4108-b179-d96eb4862944"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7a5810ca-7a24-4ac3-a4cc-758ee112f4ee">
+                <propertyInstance
+                  Id="a56c4dd9-49bb-4439-8c33-b9cd36101867"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="daf8e86d-110c-4708-ab52-c12133aca233">
+                <propertyInstance
+                  Id="653ae8bb-ae90-4c5f-92e4-df616e159435"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="13b30889-c76a-498b-9c18-680b3f37479c">
+                <propertyInstance
+                  Id="401bc8b8-17d0-470f-91e0-2c9a6e8c432e"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="591c4e4d-4827-4bf7-aa43-bd80a57351d7"
+        name="PcsOptions"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="1b3c6bf6-3371-4322-bd21-acbbfebf14a1"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.JobAssignment Type%3DPcsOptions"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="ee2b38c5-a4d8-4ad6-a78c-4c26b3d29765"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6b870b15-e2fe-49e9-a8ea-1923abb2cd64">
+                <propertyInstance
+                  Id="3eb51f30-aed1-4756-87f6-3b46159a72f1"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f497ebe5-a3c8-41ea-b758-31daee590d95">
+                <propertyInstance
+                  Id="766d6b05-e14e-466a-80ec-00dbd608e4a4"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4a871faa-63d9-4fb6-aab8-c042905b0c95">
+                <propertyInstance
+                  Id="7008d99a-fda9-49ed-b897-f5feb445c048"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c6f9f26d-4d14-4295-b981-6500ec69bf88">
+                <propertyInstance
+                  Id="1eba369c-c596-49a2-859c-6c180273c09f"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="109b4810-efcd-4c3a-b8a9-a6c9ef8d2db2">
+                <propertyInstance
+                  Id="071a6a10-ebe0-4cf0-a598-9c220d3fc8f1"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="f3422a06-5062-44de-bf46-b8b82d3387e5"
+        LastKnownName="Simulation"
+        LastKnownLocation="Package3_1938.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

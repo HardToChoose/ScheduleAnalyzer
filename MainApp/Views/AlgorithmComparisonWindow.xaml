@@ -1,0 +1,263 @@
+﻿<Window x:Class="MainApp.Views.AlgorithmComparisonWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        xmlns:conv="clr-namespace:UI.Converters;assembly=UI"
+        xmlns:oxy="http://oxyplot.org/wpf"
+        
+        Title="Порівняння алгоритмів"
+        WindowStyle="SingleBorderWindow"
+        SizeToContent="Width"
+        
+        MinHeight="480"
+        MinWidth="780"
+        
+        KeyDown="PlotCtrl_KeyDown">
+    
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="ContentRendered">
+            <i:InvokeCommandAction Command="{Binding WindowLoadedCommand}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    
+    <Window.Resources>
+        <conv:BoolToVisibilityConverter x:Key="BoolToVisibility" />
+
+        <DataTemplate x:Key="TableItemTemplate"
+                      DataType="ListBoxItem">
+            <StackPanel
+                Orientation="Vertical"
+                Margin="8">
+                <TextBlock
+                    Text="{Binding Title}"
+                    Margin="0,0,0,8" />
+                <DataGrid
+                    IsHitTestVisible="False"
+                    HeadersVisibility="Column"
+                
+                    ItemsSource="{Binding Data}"
+                    AutoGenerateColumns="False"
+                    Loaded="DataGrid_Initialized">
+                    
+                    <DataGrid.Resources>
+                        <Style TargetType="ItemsPresenter">
+                            <Setter Property="Margin" Value="0,0,0,-1" />
+                        </Style>
+                        <Style TargetType="DataGridCellsPresenter">
+                            <Setter Property="Margin" Value="1,0,-2,0" />
+                        </Style>
+                    </DataGrid.Resources>
+
+                    <DataGrid.LayoutTransform>
+                        <TransformGroup>
+                            <RotateTransform Angle="90"/>
+                            <MatrixTransform Matrix="-1,0,0,1,0,0"/>
+                        </TransformGroup>
+                    </DataGrid.LayoutTransform>
+                
+                    <DataGrid.ColumnHeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="MinWidth" Value="40" />
+                            <Setter Property="LayoutTransform">
+                                <Setter.Value>
+                                    <TransformGroup>
+                                        <RotateTransform Angle="-90"/>
+                                        <ScaleTransform ScaleX="1" ScaleY="-1" />
+                                    </TransformGroup>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </DataGrid.ColumnHeaderStyle>
+                    
+                    <DataGrid.CellStyle>
+                        <Style TargetType="DataGridCell">
+                            <Setter Property="MinWidth" Value="40" />
+                            <Setter Property="VerticalAlignment" Value="Center" />
+                            <Setter Property="HorizontalAlignment" Value="Center" />
+
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="DataGridCell">
+                                        <Border
+                                            Padding="2,2,2,3"
+                                            BorderBrush="{TemplateBinding BorderBrush}"
+                                            BorderThickness="{TemplateBinding BorderThickness}"
+                                            Background="{TemplateBinding Background}"
+                                            SnapsToDevicePixels="True">
+                                            
+                                            <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+
+                            <Setter Property="LayoutTransform">
+                                <Setter.Value>
+                                    <TransformGroup>
+                                        <RotateTransform Angle="-90"/>
+                                        <ScaleTransform ScaleX="1" ScaleY="-1" />
+                                    </TransformGroup>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </DataGrid.CellStyle>
+                </DataGrid>
+            </StackPanel>
+        </DataTemplate>
+        
+        <Style x:Key="CheckListBoxStyle"
+               TargetType="ListBox">
+            <Setter Property="Margin" Value="0,6,0,0" />
+            <Setter Property="SelectionMode" Value="Multiple" />
+            
+            <Setter Property="ItemTemplate">
+                <Setter.Value>
+                    <DataTemplate DataType="ListBoxItem">
+                        <CheckBox
+                            Content="{Binding Text, Mode=OneTime}"
+                            IsChecked="{Binding IsSelected}" />
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+            
+            <Setter Property="ItemsPanel">
+                <Setter.Value>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal" IsItemsHost="True" />
+                    </ItemsPanelTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+              
+        <Grid
+            Margin="6,6,6,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            
+            <StackPanel
+                Grid.Column="0"
+                VerticalAlignment="Center"
+                Orientation="Horizontal">
+                <StackPanel
+                    Orientation="Vertical"
+                    Margin="8">
+                    <TextBlock Text="Алгоритм формування" />
+                    <ListBox
+                        Style="{StaticResource CheckListBoxStyle}"
+                        ItemsSource="{Binding QueueingAlgorithms, Mode=OneTime}" />
+                </StackPanel>
+
+                <StackPanel
+                    Orientation="Vertical"
+                    Margin="8">
+                    <TextBlock Text="Алгоритм призначення" />
+                    <ListBox
+                        Style="{StaticResource CheckListBoxStyle}"
+                        ItemsSource="{Binding JobAssignmentAlgorithms, Mode=OneTime}" />
+                </StackPanel>
+
+                <StackPanel
+                    Orientation="Vertical"
+                    Margin="8">
+                    <TextBlock Text="Кількість робіт" />
+                    <ListBox
+                        Style="{StaticResource CheckListBoxStyle}"
+                        ItemsSource="{Binding JobCounts, Mode=OneTime}" />
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel
+                Grid.Column="1"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                
+                Margin="8"
+                Orientation="Vertical">
+                <ComboBox
+                    ItemsSource="{Binding DataSelectors, Mode=OneTime}"
+                    SelectedItem="{Binding ChosenDataSelector}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Name}" />
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                <CheckBox
+                    Margin="0,8,0,0"
+                    IsChecked="{Binding ShowBestOnly}"
+                    Content="лише найкращий" />
+            </StackPanel>
+
+            <StackPanel
+                Grid.Column="2"
+                VerticalAlignment="Center"
+                Margin="8"
+                Orientation="Vertical">
+            
+                <RadioButton
+                    x:Name="PlotsRadioButton"
+                    IsChecked="True"
+                    
+                    Content="графіки" />
+                <RadioButton
+                    x:Name="TablesRadioButton"
+                    Margin="0,8,0,0"
+                    IsChecked="{Binding ShowTables}"
+                             
+                    Content="таблиці" />
+            </StackPanel>
+        </Grid>
+        
+        <ProgressBar
+            Grid.Row="1"
+            Height="24"
+            
+            BorderBrush="Black"
+            BorderThickness="1"
+            
+            Margin="10,8,10,8"
+            
+            Minimum="0"
+            Value="{Binding Progress}"
+            Maximum="{Binding MaxProgress}"
+            
+            Visibility="{Binding IsProgressVisible, Converter={StaticResource BoolToVisibility}, Mode=OneWay}" />
+
+        <oxy:PlotView
+            x:Name="PlotCtrl"
+            Grid.Row="2"
+            Margin="6"
+            
+            Model="{Binding OxyPlotModel}"
+            Visibility="{Binding IsChecked, ElementName=PlotsRadioButton, Converter={StaticResource BoolToVisibility}, Mode=OneWay}"
+            
+            KeyDown="PlotCtrl_KeyDown">
+            <oxy:PlotView.ContextMenu>
+                <ContextMenu>
+                    <TextBlock
+                        Text="Тестувати ПКС"
+                        MouseDown="SeriesButton_Click" />
+                </ContextMenu>
+            </oxy:PlotView.ContextMenu>
+        </oxy:PlotView>
+
+        <ListBox
+            Grid.Row="2"
+            Margin="6"
+            Visibility="{Binding IsChecked, ElementName=TablesRadioButton, Converter={StaticResource BoolToVisibility}, Mode=OneWay}"
+            
+            ItemsSource="{Binding Tables, Mode=OneWay}"
+            ItemTemplate="{StaticResource TableItemTemplate}" />
+    </Grid>
+</Window>

@@ -1,0 +1,1607 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="94082f49-143b-4f79-b3e7-4158bc1e098d"
+  name="Algorithms"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="aa4f753f-bc92-4d99-8f82-a375d18e7ee1"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DTaskPlanning.Queueing.Algorithms"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="855f45c3-875c-4190-8de2-4c632918bd0c"
+        name="Interface1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="6a998a34-f67a-45c7-bfb8-e0657333486c"
+        name="Interface2"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="796249e0-0c2d-4cca-baec-df4b7ba848e7"
+        name="Class1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="699a42f3-5d54-4f03-8c58-e9d3f6c94a43"
+        name="IQueueingAlgorithm"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="b2097ce1-d9c8-42f0-ad64-88e329c1f223"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Algorithms Type%3DIQueueingAlgorithm"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="44ee5c6f-6045-45d4-b60d-9134f591efe0"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ae63d40a-bd0a-49a9-8428-ec4ff5d52fdf">
+                <propertyInstance
+                  Id="030a8475-63c5-46a3-b407-11a83ae1c90a"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="982ca7da-0eba-4192-b17c-d9f29ec1571c">
+                <propertyInstance
+                  Id="1c738818-5c07-465a-840d-820ba87e82a3"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1621119b-7ab9-4aee-8ad1-f857611524fb">
+                <propertyInstance
+                  Id="80f816b8-7b2f-40dc-b707-c642fabff02a"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="11cee64f-9d60-432e-b974-7e2b008ac165">
+                <propertyInstance
+                  Id="d633f683-f03a-48d8-8815-ce17d681fd69"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedAttributes>
+          <property
+            Id="448e4905-99a9-4792-ab4e-f1319e0e5966"
+            name="Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="26150413-466f-4bcf-a48c-0786d81c050c"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Algorithms Type%3DIQueueingAlgorithm Member%3DName"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b7a6bc52-efd1-403e-a9d6-10fc2e1d303c"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e1c33793-f1c8-4989-81fb-8e88863e92fb">
+                    <propertyInstance
+                      Id="7533bfaa-7e7c-4f18-b774-5353f9977594"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a4e10f5b-75df-4a30-8fa2-2d941eb3d82d">
+                    <propertyInstance
+                      Id="49887e39-087f-4248-bef3-371abe5642dd"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cdc26c0f-eefc-445d-ba8a-7bfc220308f0">
+                    <propertyInstance
+                      Id="deb3bc2a-f3d7-4b54-8b4d-bbabec8d1bb6"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ac8d5df3-2ea4-4f09-9c15-f87690563948">
+                    <propertyInstance
+                      Id="ec432fdb-1b9c-4509-9fca-de6be93355a3"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a2db7559-bccf-4f34-87a0-864bcc31632b">
+                    <propertyInstance
+                      Id="86a19445-1e35-414b-9aa8-c340afff0851"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fbf08b12-6bd2-4ee1-96bf-0492c1c908a6">
+                    <propertyInstance
+                      Id="8066ffd5-4959-4f5e-81f1-a07b53819afb"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="73ea03e0-776e-49c5-af91-976b687d6b29">
+                    <propertyInstance
+                      Id="75955cc9-c4ba-453b-b2a1-5622cd08df84"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Models.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="33df6ea6-ae9a-4ee5-9f5a-cd43f9ac213b"
+            name="Description"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="1bb6dec6-2977-4285-9274-82811846e017"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Algorithms Type%3DIQueueingAlgorithm Member%3DDescription"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="48b53bb4-d902-4d02-a6d7-fb3dcd11325d"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4a8e1e5b-0dc6-4ff2-858f-b91e7ad59d98">
+                    <propertyInstance
+                      Id="0ee25bb8-6b7d-4798-858d-73d859ea1d80"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9d1a8a18-b6b0-47e0-9a30-0c334441404a">
+                    <propertyInstance
+                      Id="286edb96-9c3e-424a-8e90-9527411ccdfd"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2b706743-9cef-482b-8f84-75b5249ae4ed">
+                    <propertyInstance
+                      Id="3b1647b0-8878-4982-813f-2606f5397354"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4c65a8fb-eeaf-4b71-be34-b03ad24bcd0d">
+                    <propertyInstance
+                      Id="fa56422c-0c43-4f9f-a9e0-521f52fdb3ac"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="83ac7fd1-1051-4cf2-a47d-5f6c66e35cde">
+                    <propertyInstance
+                      Id="213936b4-89f6-4fee-ac0e-d7dbe41fd05f"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0c25d409-67fe-4aed-907f-7ad2bd6787c8">
+                    <propertyInstance
+                      Id="84bf36e2-9bd5-4fc1-a90a-8b6be6e143f9"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1172fbe5-dbda-4d4e-a4d7-3cd224e8158f">
+                    <propertyInstance
+                      Id="b985b446-9fef-4bce-b45f-410cff39ea7a"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Models.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributes>
+        <ownedOperations>
+          <operation
+            Id="a3e478cc-d072-46ce-bf8f-2c3b6b4d40a0"
+            name="Compute"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="fef89ffd-4da1-4936-bd48-3cad8f14c400"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Algorithms Type%3DIQueueingAlgorithm Member%3D(Name%3DCompute OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FGraphLogic%2Fbin%2FRelease%2FGraphLogic.dll Namespace%3DGraphLogic.Entities Type%3DOperation)]))%2C(Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Statistics Type%3DTaskGraphStat)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="01569a5d-7971-4197-a7b7-edc4439f1db7"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0cc64e3e-e53f-4229-a62c-9ed2930d3d4f">
+                    <propertyInstance
+                      Id="bd22c796-5224-4b09-b629-3158c4f186a2"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="724d9985-d68e-49a9-b52a-6dc46583a301">
+                    <propertyInstance
+                      Id="614f6970-82b1-4af1-9206-2b847c5d20c9"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="56530a6d-ffbc-4c12-8b89-f20629eda092">
+                    <propertyInstance
+                      Id="48f9dc1a-2c43-4caa-a7fe-155410621fd1"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="10cb1f85-adcb-4de5-8ddb-910f93ef5385">
+                    <propertyInstance
+                      Id="ef0dc0e0-3e3e-430d-a2c7-5a55bda630ab"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c3612217-e9b7-428e-b650-afb49be7ff71">
+                    <propertyInstance
+                      Id="611c2ff1-6743-4c11-97be-3969cb909e89"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2c907f56-a0b7-4498-8f7f-4d53bbf76127">
+                    <propertyInstance
+                      Id="410ba8f3-5036-4a1e-a06f-3995e55e9aab"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2409eb63-af12-4dea-868e-3f48e4ec97ad"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="eca78452-d75b-4ca6-9b7b-8d060e2d65de"
+                      LastKnownName="OperationQueue"
+                      LastKnownLocation="Package1_1832.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="97a74856-7a71-4230-9bc4-9b82e1b3744e"
+                  name="task"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="3616dbc1-0acc-41ef-90ef-6cc10695ddf8"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Algorithms Type%3DIQueueingAlgorithm Member%3D(Name%3DCompute OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FGraphLogic%2Fbin%2FRelease%2FGraphLogic.dll Namespace%3DGraphLogic.Entities Type%3DOperation)]))%2C(Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Statistics Type%3DTaskGraphStat)]) ParameterIdentifier%3Dtask"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="9dd825a9-12b0-4843-8fee-3f8079e66fe7"
+                      LastKnownName="IEnumerable&lt;Operation‎&gt;"
+                      LastKnownLocation="Package2_1916.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9d16edb3-31d0-4d4e-9998-7ff4ddd89fb9"
+                  name="statistics"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="b79c694b-98c2-4eac-8bb8-3c97bcded1b4"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Algorithms Type%3DIQueueingAlgorithm Member%3D(Name%3DCompute OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FGraphLogic%2Fbin%2FRelease%2FGraphLogic.dll Namespace%3DGraphLogic.Entities Type%3DOperation)]))%2C(Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Statistics Type%3DTaskGraphStat)]) ParameterIdentifier%3Dstatistics"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="501367a0-1495-44bf-b609-cd633f5bb410"
+                      LastKnownName="TaskGraphStat"
+                      LastKnownLocation="Package5_1916.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="7ab7ce7c-ff82-4b9a-a8e9-0d936587b98d"
+        name="NormTimeVertSumDesc"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="8863299c-972e-407c-a8e4-f25d9cf2cc9e"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Algorithms Type%3DNormTimeVertSumDesc"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="eea65e6a-5bad-4b4b-908d-6f5a33f04157"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d023002b-fa25-4434-93ed-53caebed2dbd">
+                <propertyInstance
+                  Id="4a8fae7f-f303-4d22-8bff-d233b29a202c"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="88f7cf28-18bd-4632-bed8-4470d9abdc9d">
+                <propertyInstance
+                  Id="ccab942f-24d3-40df-a411-de3ee4b9639c"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8b49abd6-5d20-4b65-b43f-886d17953390">
+                <propertyInstance
+                  Id="e045e5f1-2e20-4ef0-b4ec-eb6529443d7b"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="870e6167-f6e0-485d-b2e6-94010bf239d2">
+                <propertyInstance
+                  Id="06b14bba-f072-4a7d-aaf6-95ae442e0ec5"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fcb3931b-9316-4f65-8e66-9a0ba1e1074b">
+                <propertyInstance
+                  Id="40c80d5e-6227-47b4-9dfa-4466e12c16e3"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="48855141-53bc-44b0-8950-397180b13679">
+            <interfaceMoniker
+              Id="699a42f3-5d54-4f03-8c58-e9d3f6c94a43"
+              LastKnownName="IQueueingAlgorithm"
+              LastKnownLocation="Package2_1832.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="3f8a4432-ba6e-4d48-bad5-f5a50b142481"
+            name="Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="88678a41-e2ae-4d9b-a04e-7ade99e10325"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Algorithms Type%3DNormTimeVertSumDesc Member%3DName"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="94650967-e072-431b-8272-f6016d22d4dd"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c77c48cd-d8d6-4b55-90b1-8a28d3e76f37">
+                    <propertyInstance
+                      Id="ddd9981d-73f6-4744-b0bd-832ca9c37572"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3d07ae1c-8c1b-4659-b784-aee90c51311a">
+                    <propertyInstance
+                      Id="02277003-5c99-450b-9090-5cb88167e5b0"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c068bc41-5811-4851-8b27-bf3a6c15ac65">
+                    <propertyInstance
+                      Id="85d42ff2-0208-4aae-8163-03fe793054cf"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e53796a6-c69c-4fcd-aa21-05e40f2cf069">
+                    <propertyInstance
+                      Id="72a6f595-befb-4e7a-aed3-7d3ec6af1418"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="94ba76d6-6dd4-4f5f-a979-f97bf9369ed5">
+                    <propertyInstance
+                      Id="bf9fa7a0-eb19-4965-8340-ec365019c569"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3743d67d-d3e3-4ffb-a90c-8f806794aec4">
+                    <propertyInstance
+                      Id="17c08cc5-19cd-45e6-8b6f-a96e17a1c69c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="64faddd0-eca5-49cf-8873-f3aff4580e96">
+                    <propertyInstance
+                      Id="b7b8910e-6fb7-4ae4-9021-9a1eb3714fec"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Models.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="eaedbd87-511a-47f9-96c0-a23b1706072d"
+            name="Description"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="98c7c1b1-82f6-479b-b087-6105e9907d91"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Algorithms Type%3DNormTimeVertSumDesc Member%3DDescription"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1f862190-6de2-47da-8184-43668f3c2f20"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9a4b7538-58b9-4e4f-b29f-185e77b1cc85">
+                    <propertyInstance
+                      Id="5e3b09ce-2224-4668-bc83-ad7ea14ccd23"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6e1d4ccb-29a8-4d3b-ada5-b9883d315f50">
+                    <propertyInstance
+                      Id="435ff61b-6e02-4eb2-8e6c-2d557a912a0b"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="df58d096-b2c7-404c-b6c5-caa87cb4a307">
+                    <propertyInstance
+                      Id="3abf0ebb-dbe7-450e-aa69-60da472d2844"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3d776846-ba3e-4c23-b74b-422107b00623">
+                    <propertyInstance
+                      Id="9cd5210c-0b60-45d0-95a0-064499c93545"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9bd8744d-187a-4e1f-acf0-deedc45f5d72">
+                    <propertyInstance
+                      Id="b7ac082f-01cb-494d-ac88-b658c7806b00"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="882aa85c-c786-4eab-bbdf-83c7c3cf167a">
+                    <propertyInstance
+                      Id="1aa4eb57-62b0-43c7-9cbe-680c2c83db3c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9c4b5f09-0952-4ea9-9db7-0c0374b38cd0">
+                    <propertyInstance
+                      Id="39c55252-95de-4797-a83b-5175f828de5a"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Models.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="7b120d27-bf42-434d-a2bd-da7d6ffa7805"
+            name="Compute"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="4d637b73-96f0-415f-b127-3456538f7e7f"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Algorithms Type%3DNormTimeVertSumDesc Member%3D(Name%3DCompute OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FGraphLogic%2Fbin%2FRelease%2FGraphLogic.dll Namespace%3DGraphLogic.Entities Type%3DOperation)]))%2C(Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Statistics Type%3DTaskGraphStat)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="02b2aa11-d716-43b7-812c-d1b531c036bf"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3fbbd6fb-f83c-4870-9865-1c0585d9b3a3">
+                    <propertyInstance
+                      Id="a3740ff2-98d1-4653-acc3-8456a4d761e1"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="68bc225b-ab8c-40db-83d1-7da80475f35b">
+                    <propertyInstance
+                      Id="bd364472-3a1e-46c4-acce-0f053feadb9d"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f901e2ff-3fd0-464d-a44c-2ae66831c1a0">
+                    <propertyInstance
+                      Id="4aa71b46-58a2-4016-9e30-bdb3970fe0db"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f1c1f991-11eb-4238-b580-c01b7c9b7849">
+                    <propertyInstance
+                      Id="d2f54cc5-93bb-428e-a713-6522b024c688"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e381d728-0cc3-47e0-b2e2-858067c8028c">
+                    <propertyInstance
+                      Id="25bdf35a-7ed1-4259-b3d2-913a2bde89bf"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2540d72c-e1e6-46d7-929c-006b4dfa6d02">
+                    <propertyInstance
+                      Id="10fee6fc-3767-41ac-bc25-83da9fe70b34"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="46e5f8dd-c7be-4156-892c-6e3dcd069d9c"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="eca78452-d75b-4ca6-9b7b-8d060e2d65de"
+                      LastKnownName="OperationQueue"
+                      LastKnownLocation="Package1_1832.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3a09f361-2a80-4662-8c5c-7dc46129f947"
+                  name="task"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="0e0b4999-9863-4983-b221-113362c5edb3"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Algorithms Type%3DNormTimeVertSumDesc Member%3D(Name%3DCompute OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FGraphLogic%2Fbin%2FRelease%2FGraphLogic.dll Namespace%3DGraphLogic.Entities Type%3DOperation)]))%2C(Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Statistics Type%3DTaskGraphStat)]) ParameterIdentifier%3Dtask"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="9dd825a9-12b0-4843-8fee-3f8079e66fe7"
+                      LastKnownName="IEnumerable&lt;Operation‎&gt;"
+                      LastKnownLocation="Package2_1916.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7c772200-36a8-4a08-8d0a-24597dc16d55"
+                  name="statistics"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="1f74cee4-6049-4aa1-b083-430d44668fd1"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Algorithms Type%3DNormTimeVertSumDesc Member%3D(Name%3DCompute OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FGraphLogic%2Fbin%2FRelease%2FGraphLogic.dll Namespace%3DGraphLogic.Entities Type%3DOperation)]))%2C(Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Statistics Type%3DTaskGraphStat)]) ParameterIdentifier%3Dstatistics"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="501367a0-1495-44bf-b609-cd633f5bb410"
+                      LastKnownName="TaskGraphStat"
+                      LastKnownLocation="Package5_1916.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="13f7d9bd-89b7-45eb-8f47-19e4b2acc551"
+            name="NormTimeVertSumDesc"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="537de1c2-2553-42b8-804c-c41b4e0a166d"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Algorithms Type%3DNormTimeVertSumDesc Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="5ed92e96-60cd-4786-8f05-611e0e16b202"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="53ecc15d-f465-4423-9839-e102a3de53d4">
+                    <propertyInstance
+                      Id="e599be90-03ff-42bf-a4f8-00ae78b1030c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="772c02e2-6056-4c07-b562-9347821e154a">
+                    <propertyInstance
+                      Id="2d1824b4-4f5f-4603-9c0a-d1d90f0d9c41"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7af77aa0-9494-4ba1-9882-2f3da9b203ba">
+                    <propertyInstance
+                      Id="0daac649-796f-42bb-b808-483166406d8f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e357e9e7-8889-4dc8-9d22-bdc653b27fa3">
+                    <propertyInstance
+                      Id="6046c4ef-1890-4e67-baf8-2f6023c71515"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f0913f1b-b67f-4916-9496-75d254e97d37">
+                    <propertyInstance
+                      Id="f735596a-2447-426f-a802-4c5b7cd3144d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="776523ae-d5f7-4e01-a8dc-df17a20cfa62">
+                    <propertyInstance
+                      Id="d5cc7e2a-9b60-456b-b267-2564329cf9ed"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b19614ce-d02c-414d-b92c-3fb32a26cc51"
+        name="VertPathVertRootDesc"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="aaeb11a3-fcff-4d1a-9667-bde48d8a328c"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Algorithms Type%3DVertPathVertRootDesc"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="1a06f451-2408-45c1-98d5-fd30ef854b24"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="10225909-46be-4e9e-9ebc-a35c644f89fe">
+                <propertyInstance
+                  Id="b52f7e66-73fe-487b-9bae-8bfe369b5e3a"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5f55b0ec-3cb8-42e3-af2c-7049e0ba2bd6">
+                <propertyInstance
+                  Id="ac7a9f6d-da75-4a92-8350-feed342292f3"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="798ccaab-3f30-4dde-91f3-f9caea8f084c">
+                <propertyInstance
+                  Id="07723fe2-43b2-4760-a4ab-78e99bf36e25"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5170fdea-2f7f-49b2-87d6-1e0d10419567">
+                <propertyInstance
+                  Id="f1706d69-233c-44b8-81e7-d05ed565eef6"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="053943a2-55ee-4372-adc8-2e2a7bf59d13">
+                <propertyInstance
+                  Id="1e50fcaf-8f01-4909-816e-393bcd97582c"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="2abecfc2-42e4-4f1d-ace0-a90fce42ea28">
+            <interfaceMoniker
+              Id="699a42f3-5d54-4f03-8c58-e9d3f6c94a43"
+              LastKnownName="IQueueingAlgorithm"
+              LastKnownLocation="Package2_1832.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="e29ea518-ca0a-4861-94dd-a74ca61a3f35"
+            name="Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="a0a7efff-eb15-4676-ab00-2a48ab17ea1f"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Algorithms Type%3DVertPathVertRootDesc Member%3DName"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1ad06662-932d-45cf-9d22-bbc394a7b3f7"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="43f374c4-15d2-4a16-90c8-83b718325915">
+                    <propertyInstance
+                      Id="807d3c03-235a-45ce-bfdf-0d7c1c16b95f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="406a32f8-f018-4999-9bf7-fb5b792214c8">
+                    <propertyInstance
+                      Id="2911703b-9be5-448f-bb0a-13b4f54bcc61"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ba5d04d5-2d97-4c8c-846f-11c962a17de9">
+                    <propertyInstance
+                      Id="c84a829b-1ef8-4c4e-8363-17a61b783279"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8fdacccc-e017-4a1e-8a72-9f3a77cc3a97">
+                    <propertyInstance
+                      Id="3ad37dd5-ef8b-450d-b666-7e317a773611"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="676bd45a-0c82-4826-9dff-81b0b5d2058b">
+                    <propertyInstance
+                      Id="de643b7b-f9f6-47cd-836c-3efe1241139a"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7b93f9d5-8f6d-4128-886b-f2001814dcb3">
+                    <propertyInstance
+                      Id="8227cd2e-089e-4480-8382-fc0dec0de801"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="436c2128-0064-4490-921f-b0f31ad7dc43">
+                    <propertyInstance
+                      Id="fe16a414-2668-4a41-aed6-0fdea1196e84"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Models.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="dc67f5b8-001f-4d81-ab50-1d7781d744b9"
+            name="Description"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="4e4daf20-cbe1-410b-802f-eab768c6bcdf"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Algorithms Type%3DVertPathVertRootDesc Member%3DDescription"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="38c5fce3-50d5-4f16-94db-f1330ca6ffa5"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1eb23981-d214-492d-80ac-64715d830c1d">
+                    <propertyInstance
+                      Id="a94acb16-fc40-4b23-acf4-e2c5d848380d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="578d42cd-8bb3-4cd9-afee-b7c83f7385c6">
+                    <propertyInstance
+                      Id="7f88fa32-506e-4a30-a835-48ac3afc590e"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8fa47a96-8503-4164-8fa7-fe75de6db479">
+                    <propertyInstance
+                      Id="674a9931-00b5-4e0c-993f-1a0cce16e4aa"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="78acd64c-6b82-47f6-93d4-d9017915576f">
+                    <propertyInstance
+                      Id="2f07d8b4-087b-4081-a13d-cad80be7deac"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2e5b5023-0474-445a-be3e-661f30af764e">
+                    <propertyInstance
+                      Id="0139c56f-1476-49a5-bb53-1727c5bde10c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="db414461-74d4-407e-ad15-7b3777d7daf3">
+                    <propertyInstance
+                      Id="f5220948-3a3c-42f1-a81d-afea41515386"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5ce3298f-ca23-43a5-965a-bf11c9dd90b4">
+                    <propertyInstance
+                      Id="79242f4c-10b0-438a-a8ee-451da2d94ee9"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Models.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="7bf848b6-7866-41ae-b354-e7635e767736"
+            name="Compute"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="fa2d9c42-0d8a-4ab7-adb3-b1c519bd0db8"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Algorithms Type%3DVertPathVertRootDesc Member%3D(Name%3DCompute OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FGraphLogic%2Fbin%2FRelease%2FGraphLogic.dll Namespace%3DGraphLogic.Entities Type%3DOperation)]))%2C(Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Statistics Type%3DTaskGraphStat)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="6af5ffe7-9da5-4087-8f9f-67db0420b415"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6993f790-68d6-457b-8c76-8ff13e328681">
+                    <propertyInstance
+                      Id="5a157d44-4ff3-42bb-8d99-88f96755eae3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0d0b7c36-1f02-4c29-9315-900fb1017a29">
+                    <propertyInstance
+                      Id="24d4a177-4afa-44b7-ba0f-1762dfe51588"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eb9c6d67-9a13-4aa4-9234-d3b6d9966012">
+                    <propertyInstance
+                      Id="e6f297ab-2799-44b6-8f74-4c42413cc136"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="94532d16-ca11-4f64-9020-831ce06b73b0">
+                    <propertyInstance
+                      Id="e48b0d08-39e2-4b66-ba71-9e64fe8f3700"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2f1896e3-0484-4f1c-bf8b-3c6223ae502f">
+                    <propertyInstance
+                      Id="efc07ab8-41d3-45f0-8ba0-89252d7eed5a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="443953a9-d5b2-4ceb-bffd-5d56723d574c">
+                    <propertyInstance
+                      Id="eed1251d-e5e7-441e-b46c-e3259758df20"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e6452be5-c482-489c-b641-c1e918ade728"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="eca78452-d75b-4ca6-9b7b-8d060e2d65de"
+                      LastKnownName="OperationQueue"
+                      LastKnownLocation="Package1_1832.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f8872da7-c2d1-4d65-bea1-627ec5e8e1f4"
+                  name="task"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="7529704c-796e-430a-8a94-43d56bcb325c"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Algorithms Type%3DVertPathVertRootDesc Member%3D(Name%3DCompute OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FGraphLogic%2Fbin%2FRelease%2FGraphLogic.dll Namespace%3DGraphLogic.Entities Type%3DOperation)]))%2C(Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Statistics Type%3DTaskGraphStat)]) ParameterIdentifier%3Dtask"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="9dd825a9-12b0-4843-8fee-3f8079e66fe7"
+                      LastKnownName="IEnumerable&lt;Operation‎&gt;"
+                      LastKnownLocation="Package2_1916.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="73ee67c4-7ffb-4472-b744-ad902d1283dc"
+                  name="statistics"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="0867028b-59b0-48cf-8ff3-304f6f1c2074"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Algorithms Type%3DVertPathVertRootDesc Member%3D(Name%3DCompute OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FGraphLogic%2Fbin%2FRelease%2FGraphLogic.dll Namespace%3DGraphLogic.Entities Type%3DOperation)]))%2C(Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Statistics Type%3DTaskGraphStat)]) ParameterIdentifier%3Dstatistics"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="501367a0-1495-44bf-b609-cd633f5bb410"
+                      LastKnownName="TaskGraphStat"
+                      LastKnownLocation="Package5_1916.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="9f9391e9-3d33-419f-a22a-7259a289b01a"
+            name="VertPathVertRootDesc"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="a088e319-ff25-4fef-bbc7-21e8cdba7ccf"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Algorithms Type%3DVertPathVertRootDesc Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1a2b3f8a-c1e9-46f9-8f9c-789d45a3b876"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9c0418e2-9a26-4ecb-a114-79ca07ffc0d0">
+                    <propertyInstance
+                      Id="58da10f7-578d-493c-88d2-4f3bcdbe2b3b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a1cf016e-b07c-49e0-acba-6251ec572cdd">
+                    <propertyInstance
+                      Id="33e5c3fe-02e2-4338-8321-10a0afa063d3"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e083c891-8b0e-4a33-954b-ca9fc63aba4a">
+                    <propertyInstance
+                      Id="0684160b-4d33-4853-bc7d-6693a9412a85"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="273e524d-13c2-4c6a-bdca-3eb01dd745d9">
+                    <propertyInstance
+                      Id="a965bbdf-0903-45c4-ad81-9a574c08084c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9f85e6c3-1478-44d6-8869-1a4c0cb623bf">
+                    <propertyInstance
+                      Id="3676d251-d2bb-466b-ba10-1012ceb0646f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b6c10d7c-bd1f-4ea2-966c-38c9cec678b7">
+                    <propertyInstance
+                      Id="79e3ecfd-abde-48b8-8b21-bbc3bf70f8f7"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a7e4006e-9501-4309-a474-770c905e3a33"
+        name="VertWeightAsc"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="859dcce2-44e7-49bc-81f0-86973323d5d8"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Algorithms Type%3DVertWeightAsc"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="155ba00c-b69b-4def-94e5-81a54cea95d9"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7cff4f10-0811-48a4-8fa6-cf1903fb5b83">
+                <propertyInstance
+                  Id="4752b41c-4444-483a-b9bf-9493db19a643"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ed475309-fefe-4ef6-b906-7f69299fbe34">
+                <propertyInstance
+                  Id="8f72fe7f-5a78-4a04-9eb5-75a19d40e53f"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1e74bbb7-de08-4b76-917e-1616c0c70b5b">
+                <propertyInstance
+                  Id="fa25db73-294d-48fb-bcfc-bff61c30c618"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8f1c05a0-37ec-422b-93b9-4f3bb2b74e80">
+                <propertyInstance
+                  Id="fa084a51-0d90-47a4-965f-335f9a029fbe"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="910fab4b-0164-4763-9331-eb862054d16e">
+                <propertyInstance
+                  Id="bdc61825-bb26-443b-bb48-2453ba300cbb"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="e81b6dd5-a0e6-4110-b4db-69665f2c0f5b">
+            <interfaceMoniker
+              Id="699a42f3-5d54-4f03-8c58-e9d3f6c94a43"
+              LastKnownName="IQueueingAlgorithm"
+              LastKnownLocation="Package2_1832.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="08e8f7db-c538-4893-b0c7-7002c89a9e46"
+            name="Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="69a3dd49-2e3b-4d0b-bf84-86c43ad37514"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Algorithms Type%3DVertWeightAsc Member%3DName"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="431f4a90-e1d1-4682-8b07-cf2d0cfc301c"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3e9738eb-5527-4655-88bf-dced9286a9d8">
+                    <propertyInstance
+                      Id="8a032dbc-2f35-45ad-af65-22131701668f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f4d6eb13-f0cb-4244-bcd7-65711e6b84d5">
+                    <propertyInstance
+                      Id="3982b56d-5d7c-4054-814f-e5151fb95265"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="98d14f02-27bd-4756-95f8-84b0d09aa904">
+                    <propertyInstance
+                      Id="a3ab0575-b9bb-4b82-b028-229eb1707326"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5429e2be-2294-4b71-8fb9-05e880a283b5">
+                    <propertyInstance
+                      Id="c46eea40-3ede-4870-8f2d-307761b68408"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c97fd882-1d64-48a5-aa22-4e051a32d763">
+                    <propertyInstance
+                      Id="bcd27333-c22d-46ab-8fe4-b7d351688aa0"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5625ce6c-1950-462c-aefa-201f43499fcb">
+                    <propertyInstance
+                      Id="541cb4c1-6b62-4398-9693-df3e515fed27"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9bac78ac-4ac7-4323-9e38-acfaaa26c43a">
+                    <propertyInstance
+                      Id="10eb0c89-4f04-41fd-b882-c0909e134cc3"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Models.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="43cad9e0-3951-4110-842c-4d9744ba1c6d"
+            name="Description"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="b97f9d23-3de5-409c-95bf-455e3b98337e"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Algorithms Type%3DVertWeightAsc Member%3DDescription"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="3450103e-0708-4ad2-af30-d887a0375a0a"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4e7cf318-514f-4142-83f0-6c67d8d1db4d">
+                    <propertyInstance
+                      Id="ea72a6ae-f2f2-48bc-9c08-ca162d14b752"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="07f5e8c9-3499-47de-886b-983a674afa1a">
+                    <propertyInstance
+                      Id="65d35779-3950-4ffe-858f-0dab17061225"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="314ab129-ea01-4526-a9c6-9c4b20c902f7">
+                    <propertyInstance
+                      Id="40e3d4ad-6d9b-41f9-93de-a5e5af4c1d5d"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="74298a76-5b70-4325-a42a-8663f0f350bd">
+                    <propertyInstance
+                      Id="4c7efa13-a31a-4ea1-8d7e-57b0e4d8d542"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3dfd15d9-115b-4d10-9e59-5e383051e035">
+                    <propertyInstance
+                      Id="1c9a6a01-e048-4030-beca-c0bb4eea28dd"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5c2fc02c-3595-4513-9a12-1494c5fd0a9e">
+                    <propertyInstance
+                      Id="3e450a11-b8c6-4d1c-a68b-89f6170a67a2"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="23cd4bea-08d4-42eb-aa96-041530f15f53">
+                    <propertyInstance
+                      Id="b43b2b32-386b-4347-8e8f-b82803072bb9"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Models.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="9caba6fd-cdc4-461f-8e3f-1add4a2612a2"
+            name="Compute"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="e5054d07-63f7-4b71-b479-5664d3fffc0f"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Algorithms Type%3DVertWeightAsc Member%3D(Name%3DCompute OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FGraphLogic%2Fbin%2FRelease%2FGraphLogic.dll Namespace%3DGraphLogic.Entities Type%3DOperation)]))%2C(Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Statistics Type%3DTaskGraphStat)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="60878b95-3127-409a-9928-3a2b71da97af"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d24f4127-c13f-4544-b350-f1dbb6a4eddf">
+                    <propertyInstance
+                      Id="eae9b7bb-d387-441f-b328-cd660b2e4fd1"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a664021d-825d-40aa-9249-a8d913e9fe03">
+                    <propertyInstance
+                      Id="27fd7d5b-85d3-4a4d-8b6b-6751031de4a9"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2df828c3-4198-42e9-8d54-ea2753347677">
+                    <propertyInstance
+                      Id="3e36bcff-00d3-4e51-8787-8ef9ea4389cc"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="35e93b83-0d43-46c6-b296-ebba9a57f072">
+                    <propertyInstance
+                      Id="66a9212f-190c-4a4a-a988-333789f0710a"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7dfc64be-bde8-4a5d-9905-7ea5185a1017">
+                    <propertyInstance
+                      Id="df299b0e-7e4d-418f-af5d-02355302a1d2"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b1f186ea-dee2-434e-b2d8-21c3cfa1b0d2">
+                    <propertyInstance
+                      Id="bc9aa298-83c1-416d-b36b-e2c12b695aa5"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c0cb7bb3-1b06-4703-83c2-33d9dbb303c7"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="eca78452-d75b-4ca6-9b7b-8d060e2d65de"
+                      LastKnownName="OperationQueue"
+                      LastKnownLocation="Package1_1832.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1502c157-1a1a-4255-a739-7a940b371750"
+                  name="task"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="b24de500-0b72-4218-8c00-0862866bab0e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Algorithms Type%3DVertWeightAsc Member%3D(Name%3DCompute OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FGraphLogic%2Fbin%2FRelease%2FGraphLogic.dll Namespace%3DGraphLogic.Entities Type%3DOperation)]))%2C(Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Statistics Type%3DTaskGraphStat)]) ParameterIdentifier%3Dtask"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="9dd825a9-12b0-4843-8fee-3f8079e66fe7"
+                      LastKnownName="IEnumerable&lt;Operation‎&gt;"
+                      LastKnownLocation="Package2_1916.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1ff6c1ce-f580-483f-8fe1-0bd33df2fd75"
+                  name="statistics"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="bda25cdf-b2f4-4155-8d88-b0782b4ef8b6"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Algorithms Type%3DVertWeightAsc Member%3D(Name%3DCompute OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FGraphLogic%2Fbin%2FRelease%2FGraphLogic.dll Namespace%3DGraphLogic.Entities Type%3DOperation)]))%2C(Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Statistics Type%3DTaskGraphStat)]) ParameterIdentifier%3Dstatistics"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="501367a0-1495-44bf-b609-cd633f5bb410"
+                      LastKnownName="TaskGraphStat"
+                      LastKnownLocation="Package5_1916.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="2b9d9006-a552-419c-8b8a-d5dd9a6e64ad"
+            name="VertWeightAsc"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="8ea5cd2d-d495-4770-9ed3-bd23a4b8f17f"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.Queueing.Algorithms Type%3DVertWeightAsc Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1e4fe787-e14e-4123-91d9-f2bb0b23bd0d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e6ada64d-d527-434b-9a49-5f9fe1a77301">
+                    <propertyInstance
+                      Id="3f29c88c-31d1-405e-ba69-cd62ce532e9e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="98c9debb-a9f7-4c91-9e3d-e7066a5ce394">
+                    <propertyInstance
+                      Id="9bd39ab8-d76f-4ff3-9478-81aff8d7d1b6"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f94a2c40-3f92-4184-9637-7701a42009ff">
+                    <propertyInstance
+                      Id="94b7b4bd-7175-4345-9d0d-e92e17223928"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="73c2b2b3-2ee4-4c6c-9057-749ea098d571">
+                    <propertyInstance
+                      Id="acbb73c0-3be1-482d-95ea-a209a71e575f"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6905a41a-c32f-4e1f-a69d-5b85fe7ad432">
+                    <propertyInstance
+                      Id="a23f6e62-8c7e-4567-a27d-197f3e65ecac"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b3570e2b-4534-4387-890e-47a993a58e37">
+                    <propertyInstance
+                      Id="c8846ffa-c50f-4884-a121-0241dc7e781b"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

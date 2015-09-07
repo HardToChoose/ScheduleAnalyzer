@@ -1,0 +1,111 @@
+﻿<Window
+    x:Class="MainApp.Views.TaskGenerationDialog"
+    
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    
+    Title="Параметри графу задач"
+    
+    BorderThickness="0"
+    WindowStyle="ToolWindow"
+    
+    FocusManager.FocusedElement="{Binding ElementName=VertexCount}"
+    
+    ResizeMode="NoResize"
+    SizeToContent="WidthAndHeight"
+    WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock
+            Grid.Row="0"
+            Grid.Column="0"
+            
+            Margin="8,8,8,0"
+            Text="Кількість операцій:"/>
+        <TextBox x:Name="VertexCount"
+            Grid.Row="0"
+            Grid.Column="1"
+            
+            MinWidth="60"
+            Margin="0,8,8,0"            
+            Text="{Binding OperationCount}" />
+
+        <TextBlock
+            Grid.Row="1"
+            Grid.Column="0"
+            
+            Margin="8,8,8,0"
+            Text="Мінімальна вага операції:"/>
+        <TextBox
+            Grid.Row="1"
+            Grid.Column="1"
+            
+            MinWidth="60"
+            Margin="0,8,8,0"            
+            Text="{Binding MinComplexity}" />
+
+        <TextBlock
+            Grid.Row="2"
+            Grid.Column="0"
+            
+            Margin="8,8,8,0"
+            Text="Максимальна вага операції:"/>
+        <TextBox
+            Grid.Row="2"
+            Grid.Column="1"
+            
+            MinWidth="60"
+            Margin="0,8,8,0"            
+            Text="{Binding MaxComplexity}" />
+        
+        <TextBlock
+            Grid.Row="3"
+            Grid.Column="0"
+            
+            Margin="8,8,8,0"
+            Text="Зв'язність графу:"/>
+        <TextBox
+            Grid.Row="3"
+            Grid.Column="1"
+            
+            MinWidth="60"
+            Margin="0,8,8,0"            
+            Text="{Binding Connectivity}" />
+
+        <StackPanel
+            Grid.Row="4"
+            Grid.ColumnSpan="2"
+            
+            Orientation="Horizontal"
+            HorizontalAlignment="Center">
+            <Button
+                Content="OК"
+                IsDefault="True"
+                Click="OK_Button_Click"
+            
+                Padding="3"
+                Margin="8,10,0,8"
+                Width="60" />
+            <Button
+                Content="Нє"
+                IsCancel="True"
+                Click="Cancel_Button_Click"
+            
+                Padding="3"
+                Margin="8,10,8,8"
+                Width="60"/>
+        </StackPanel>
+    </Grid>
+</Window>

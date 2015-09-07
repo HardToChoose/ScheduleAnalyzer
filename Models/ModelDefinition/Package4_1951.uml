@@ -1,0 +1,748 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="42498c00-9c55-4731-94cf-97c074e67728"
+  name="QuickGraph"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="1e02e1d1-a811-4851-9956-7a08f272a4df"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DQuickGraph"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="880a466b-df82-473b-bf82-34d9d06113de"
+        name="IEdge&lt;V‎&gt;"
+        isAbstract="false"
+        isLeaf="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="0630aba1-08a9-476b-9a85-8bdb8a26878a"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6d1ee73e-4bbc-4b74-8f08-fbb624236679">
+                <propertyInstance
+                  Id="83f53f66-e007-4a50-b787-927b09dd8abb"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="56cf95d8-be17-4073-ac7c-99bf33790569">
+                <propertyInstance
+                  Id="3f692ad8-6dad-4dfc-86c2-a3281c7ef3b2"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="68e62d41-7c55-463f-a0df-679554ee13ee">
+                <propertyInstance
+                  Id="d35d6038-2cae-43f9-928e-8190c2645beb"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="40129e15-4c48-4c14-9e13-3397a437723d">
+                <propertyInstance
+                  Id="841f6101-d065-4eb9-b4a2-58ac2b64bdd4"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="af948214-111e-4a52-bf12-2886660d2462">
+            <redefinableTemplateSignatureMoniker
+              Id="45307020-e925-4a1f-9e86-f52308c29337"
+              LastKnownLocation="Package4_1951.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="0213422e-a9f1-4806-bcf9-9b280851fdeb">
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="1fe23182-a876-4fdd-8860-a2ece5a93577"
+                      LastKnownLocation="Package4_1951.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="4bdb422d-255e-4ad0-90c9-7548a2ded2ed"
+        name="IEdge"
+        visibility="Private"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="e9259101-81d1-4393-a6e9-e31704890bd8"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2Fpackages%2FQuickGraph.3.6.61119.7%2Flib%2Fnet4%2FQuickGraph.dll Namespace%3DQuickGraph Type%3D(Name%3DIEdge GenericParameterCount%3D1)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="f3d1a199-8eb2-4429-b2eb-8dd69c4a1dac"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d16e1830-71dd-42d4-9012-fc09b1a6b95c">
+                <propertyInstance
+                  Id="984c45b0-7e88-4e91-9bd9-6a4294b87886"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d42c423e-f84e-487b-8c59-35ca57b4bfee">
+                <propertyInstance
+                  Id="8ce6f19d-6df4-4ced-821d-555881ec1e77"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e693e43b-f90e-437d-821e-637dc034374a">
+                <propertyInstance
+                  Id="a9312722-7443-4ee4-a451-34ce09537a4a"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a40896e9-02d2-48fe-9508-09bf5b8dad29">
+                <propertyInstance
+                  Id="bc3bfd94-388f-453e-8a52-f97fbf6f7854"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature
+            Id="45307020-e925-4a1f-9e86-f52308c29337"
+            parameters=""
+            name="RedefinableTemplateSignature1"
+            isLeaf="false">
+            <ownedParameters>
+              <classifierTemplateParameter
+                Id="1fe23182-a876-4fdd-8860-a2ece5a93577">
+                <referencesInternal>
+                  <reference
+                    Id="99fbbd1b-6cf8-4235-abbd-4e5a0b2b5a2d"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2Fpackages%2FQuickGraph.3.6.61119.7%2Flib%2Fnet4%2FQuickGraph.dll Namespace%3DQuickGraph Type%3D(Name%3DIEdge GenericParameterCount%3D1) ParameterIdentifier%3D0"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="2ac18f4a-ad9c-42c1-b1ea-522bce614b59"
+                    name="TVertex"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9ae95bdd-71ce-49d9-8eff-6bbea96d9703"
+        name="BidirectionalGraph&lt;EditableValueBase‎, WeightedEdge‎&gt;"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="d59365a4-5693-4ce8-ae86-406ae7ecb212"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5bc5125a-e354-41b7-b947-52e6059e22b3">
+                <propertyInstance
+                  Id="b7ade668-958f-4590-b00b-5b2f3927cf95"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8b36dfe8-18e4-455f-aaac-320319165662">
+                <propertyInstance
+                  Id="97dcddd6-ce63-4a59-a2a2-3c387540d983"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5fa0ff4e-95a9-4cfe-80ed-a11e123c1a22">
+                <propertyInstance
+                  Id="f91ddc86-8342-455d-b04b-b2a760eea657"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5deddb5b-2e90-44e4-bc06-4ff829810541">
+                <propertyInstance
+                  Id="740dacfc-c0c1-46a1-b3af-3ca50ff9cd52"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e7c286e7-37a8-4a12-ba8c-17d63a9328dd">
+                <propertyInstance
+                  Id="d616b6f4-7373-478f-a4dd-ee319f0cb8ac"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="9cac3622-44ae-4bf5-aaad-33ce2d67c625">
+            <interfaceMoniker
+              Id="d36373d4-590c-4a8a-ac0b-64e077f117b3"
+              LastKnownName="IMutableVertexAndEdgeSet&lt;EditableValueBase‎, WeightedEdge‎&gt;"
+              LastKnownLocation="Package4_1951.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <signatures>
+          <templateBinding
+            Id="43d2ad53-ebbb-43d8-90a3-2cf458fcc140">
+            <redefinableTemplateSignatureMoniker
+              Id="763d6a9f-7ba3-4a11-9e33-4dc6f5f39367"
+              LastKnownLocation="Package4_1951.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="0747fe35-5983-480d-9564-6373cf1988a9">
+                  <actuals>
+                    <classMoniker
+                      Id="495d9ffd-f77c-486f-88b7-5376c99bd546"
+                      LastKnownName="EditableValueBase"
+                      LastKnownLocation="Package4_1916.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="eb0022a1-0d5c-4699-b548-1069b4d361b3"
+                      LastKnownLocation="Package4_1951.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="2e8a6b18-caf9-4ac4-8407-c5e4317a14d9">
+                  <actuals>
+                    <classMoniker
+                      Id="a75e9c57-1b5e-43c9-a90a-79ab172bfb7a"
+                      LastKnownName="WeightedEdge"
+                      LastKnownLocation="Package2_1938.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="733d8dca-5a18-46d2-a643-168984334b36"
+                      LastKnownLocation="Package4_1951.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="dc6da808-1039-44af-a4ce-f9a16d9df1a5"
+        name="BidirectionalGraph"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="0dd4eab7-54e1-45d2-81c8-2040cdcb61f3"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2Fpackages%2FQuickGraph.3.6.61119.7%2Flib%2Fnet4%2FQuickGraph.dll Namespace%3DQuickGraph Type%3D(Name%3DBidirectionalGraph GenericParameterCount%3D2)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="86fe7df8-63d1-4d16-8da4-2b4fc21d2047"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7593cf9e-c09a-4358-be0a-5411d8781fa6">
+                <propertyInstance
+                  Id="e2a7af0c-b529-4f12-a971-642ad2720112"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="827dd7fd-c564-406f-85e5-66291ded4611">
+                <propertyInstance
+                  Id="7051e277-45fe-4843-b116-df4f0a79fe28"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f2142208-5ad1-49cb-89bc-f1ee2586530f">
+                <propertyInstance
+                  Id="40568578-9a21-413f-a4d0-2b609d8b4990"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f06a526c-6b29-493e-9eae-7f4af18342bf">
+                <propertyInstance
+                  Id="af4aa7e9-a9c9-42a8-9462-774c6fe89a71"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="381f6c01-874c-4876-a4f0-63e1c18459fc">
+                <propertyInstance
+                  Id="90d98a71-2077-4960-903e-288d4439a9cd"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature
+            Id="763d6a9f-7ba3-4a11-9e33-4dc6f5f39367"
+            parameters=""
+            name="RedefinableTemplateSignature1"
+            isLeaf="false">
+            <ownedParameters>
+              <classifierTemplateParameter
+                Id="eb0022a1-0d5c-4699-b548-1069b4d361b3">
+                <referencesInternal>
+                  <reference
+                    Id="eda0f645-e6ec-4258-89b4-5d98d4ee98e1"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2Fpackages%2FQuickGraph.3.6.61119.7%2Flib%2Fnet4%2FQuickGraph.dll Namespace%3DQuickGraph Type%3D(Name%3DBidirectionalGraph GenericParameterCount%3D2) ParameterIdentifier%3D0"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="713c1a34-1b92-4abe-a5b2-056fe64268e8"
+                    name="TVertex"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+              <classifierTemplateParameter
+                Id="733d8dca-5a18-46d2-a643-168984334b36">
+                <referencesInternal>
+                  <reference
+                    Id="e105cff0-3443-4077-97fe-dfa287604bba"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2Fpackages%2FQuickGraph.3.6.61119.7%2Flib%2Fnet4%2FQuickGraph.dll Namespace%3DQuickGraph Type%3D(Name%3DBidirectionalGraph GenericParameterCount%3D2) ParameterIdentifier%3D1"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="6f6f85b9-b729-49c3-891d-47de3a51af2c"
+                    name="TEdge"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="d36373d4-590c-4a8a-ac0b-64e077f117b3"
+        name="IMutableVertexAndEdgeSet&lt;EditableValueBase‎, WeightedEdge‎&gt;"
+        isAbstract="false"
+        isLeaf="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="853bcbfb-aa2f-42fb-9fa6-07c40984befa"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6c64a819-150c-4f7c-a567-b1076585f823">
+                <propertyInstance
+                  Id="3fcf0004-6b25-4f39-8f91-184ec8fcd8d7"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3a516bfe-fe83-4b6a-aa68-9bb2c9791363">
+                <propertyInstance
+                  Id="015df726-82ad-4a87-b7ae-db54201703f4"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="506b52c9-dd33-46bc-ab55-9308b1d047f3">
+                <propertyInstance
+                  Id="da9d3b8c-8025-48ed-bcab-8f63c1b814c1"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="53c9ebe3-cc5a-4492-9028-de983580a128">
+                <propertyInstance
+                  Id="5ca0a13e-3f77-4965-a092-343bc63cd818"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="6dcb318d-4e64-4bce-ba91-0b1d013bdeca">
+            <redefinableTemplateSignatureMoniker
+              Id="00d612ad-6b83-42fc-94fd-66dc61ce9800"
+              LastKnownLocation="Package4_1951.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="ee810a72-7531-40ab-8d95-a502844bd283">
+                  <actuals>
+                    <classMoniker
+                      Id="495d9ffd-f77c-486f-88b7-5376c99bd546"
+                      LastKnownName="EditableValueBase"
+                      LastKnownLocation="Package4_1916.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="9862dac3-e93b-4bf5-87f5-d9eae3316bb6"
+                      LastKnownLocation="Package4_1951.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="2283fbc9-08d0-4d00-a31a-594ae0e27f6d">
+                  <actuals>
+                    <classMoniker
+                      Id="a75e9c57-1b5e-43c9-a90a-79ab172bfb7a"
+                      LastKnownName="WeightedEdge"
+                      LastKnownLocation="Package2_1938.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="18612176-07c6-435f-b45e-8f97c9d0ebe4"
+                      LastKnownLocation="Package4_1951.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="99698f29-4ef3-453b-9582-119facff4f1b"
+        name="IMutableVertexAndEdgeSet"
+        visibility="Private"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="cd25a407-cdcf-4ee5-8859-594ad8b83316"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2Fpackages%2FQuickGraph.3.6.61119.7%2Flib%2Fnet4%2FQuickGraph.dll Namespace%3DQuickGraph Type%3D(Name%3DIMutableVertexAndEdgeSet GenericParameterCount%3D2)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="6f0a9494-f5b1-4ea6-9ba6-f2288f386bdc"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="91a0407d-eddc-4596-be49-5d3b3d3166af">
+                <propertyInstance
+                  Id="14ed0866-bcf3-4e22-9112-8c9105c001f7"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c227cf12-7dcf-4568-b912-2cbc5a348dc2">
+                <propertyInstance
+                  Id="f3ca48a0-c9bd-4885-9ba4-62f2d38ce9c3"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8eb5912b-8e75-4613-9afb-23275fcceb2a">
+                <propertyInstance
+                  Id="fe48b30a-0181-4b0a-9cc0-912602a9d24b"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="873b0c5e-84f3-40e8-b758-171dc3c76a84">
+                <propertyInstance
+                  Id="9e95cffe-598e-46ad-89ad-018d10e8c31b"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature
+            Id="00d612ad-6b83-42fc-94fd-66dc61ce9800"
+            parameters=""
+            name="RedefinableTemplateSignature1"
+            isLeaf="false">
+            <ownedParameters>
+              <classifierTemplateParameter
+                Id="9862dac3-e93b-4bf5-87f5-d9eae3316bb6">
+                <referencesInternal>
+                  <reference
+                    Id="46bc3960-d142-47c2-a016-7ce40217ddcf"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2Fpackages%2FQuickGraph.3.6.61119.7%2Flib%2Fnet4%2FQuickGraph.dll Namespace%3DQuickGraph Type%3D(Name%3DIMutableVertexAndEdgeSet GenericParameterCount%3D2) ParameterIdentifier%3D0"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="cac6b86c-3947-402a-a601-42493f36bd50"
+                    name="TVertex"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+              <classifierTemplateParameter
+                Id="18612176-07c6-435f-b45e-8f97c9d0ebe4">
+                <referencesInternal>
+                  <reference
+                    Id="d1df7b82-cfae-4d71-b456-27f3569cb0cd"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2Fpackages%2FQuickGraph.3.6.61119.7%2Flib%2Fnet4%2FQuickGraph.dll Namespace%3DQuickGraph Type%3D(Name%3DIMutableVertexAndEdgeSet GenericParameterCount%3D2) ParameterIdentifier%3D1"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="9540d952-0999-4d2b-88a6-2d1f4c5c8fa3"
+                    name="TEdge"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ef06de72-b933-4704-a247-b9a4ff590749"
+        name="UndirectedGraph&lt;EditableValueBase‎, WeightedEdge‎&gt;"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="04d10183-1bab-4c1a-9c27-500ba1c23b8e"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="65b0a236-5ca7-4103-bb52-212a71df0d82">
+                <propertyInstance
+                  Id="575cfe17-c29f-4eea-904f-c6eafab386b4"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="59eb012c-6b0a-49a0-85ac-859e95a3ec8a">
+                <propertyInstance
+                  Id="c4f08c63-e414-4fc7-a37d-b784aa8b04a7"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c9e011bb-284e-47e5-b70c-eae0a06df12c">
+                <propertyInstance
+                  Id="067a0a82-f654-4ac9-af4a-291b485af069"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e0bc2a30-ec51-4bfa-bfd3-5e0f11c2a9f2">
+                <propertyInstance
+                  Id="c4c756c8-1696-49a1-b4d8-acffff026c43"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a2b4df60-8a99-4ec2-9ee2-36cdeca422d5">
+                <propertyInstance
+                  Id="f5c8c4a8-2950-4e39-8dfe-34d19c37d648"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="02555c41-6764-40ba-b7c9-8b3d24b5357b">
+            <interfaceMoniker
+              Id="d36373d4-590c-4a8a-ac0b-64e077f117b3"
+              LastKnownName="IMutableVertexAndEdgeSet&lt;EditableValueBase‎, WeightedEdge‎&gt;"
+              LastKnownLocation="Package4_1951.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <signatures>
+          <templateBinding
+            Id="f85ffc9f-ab09-4b8c-9d55-e7817d85dcea">
+            <redefinableTemplateSignatureMoniker
+              Id="58dc99b7-6dc1-49e5-8f12-f7ce14ce43f7"
+              LastKnownLocation="Package4_1951.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="ca5b5c2c-5fad-4e5e-85c2-cf2c011beebf">
+                  <actuals>
+                    <classMoniker
+                      Id="495d9ffd-f77c-486f-88b7-5376c99bd546"
+                      LastKnownName="EditableValueBase"
+                      LastKnownLocation="Package4_1916.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="1e6661ce-c413-4d2b-a186-bc29d6b0019f"
+                      LastKnownLocation="Package4_1951.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="52f9c398-67a9-4d82-b3fd-34d7ad1675ee">
+                  <actuals>
+                    <classMoniker
+                      Id="a75e9c57-1b5e-43c9-a90a-79ab172bfb7a"
+                      LastKnownName="WeightedEdge"
+                      LastKnownLocation="Package2_1938.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="4c4bb084-ece9-4c7f-bce3-7502a424c01f"
+                      LastKnownLocation="Package4_1951.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a10148b9-24c1-4eed-af1e-d37ad88e108e"
+        name="UndirectedGraph"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="284927e1-6759-4ccc-aef8-ad36bd5d4c80"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2Fpackages%2FQuickGraph.3.6.61119.7%2Flib%2Fnet4%2FQuickGraph.dll Namespace%3DQuickGraph Type%3D(Name%3DUndirectedGraph GenericParameterCount%3D2)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="266c5192-f4b2-46e0-91ad-edc82a7450fb"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="83caed3c-4179-400d-8905-4b689960492c">
+                <propertyInstance
+                  Id="e475835e-4338-4250-acc3-c36c2de0456a"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e5a77b67-bf46-4e84-9770-03532c4d90c9">
+                <propertyInstance
+                  Id="565b6cca-8d07-419b-9d88-bd2bffef5a17"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c05a5f38-39d7-4c87-9607-8d95b375bb61">
+                <propertyInstance
+                  Id="325e5be8-50cb-42dd-a37e-ac1ea22861bd"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="23c3b0a0-da9f-42f9-b4f1-00e9e1c9629f">
+                <propertyInstance
+                  Id="be887522-5f68-4708-b001-1b611a3a3792"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2f7454ad-a41d-4e13-af7a-a6a9c78f5316">
+                <propertyInstance
+                  Id="09367f7f-9ee2-4c84-a64d-82e81c22af6e"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature
+            Id="58dc99b7-6dc1-49e5-8f12-f7ce14ce43f7"
+            parameters=""
+            name="RedefinableTemplateSignature1"
+            isLeaf="false">
+            <ownedParameters>
+              <classifierTemplateParameter
+                Id="1e6661ce-c413-4d2b-a186-bc29d6b0019f">
+                <referencesInternal>
+                  <reference
+                    Id="7c8e4f1f-4373-4365-b979-0eab3029af4b"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2Fpackages%2FQuickGraph.3.6.61119.7%2Flib%2Fnet4%2FQuickGraph.dll Namespace%3DQuickGraph Type%3D(Name%3DUndirectedGraph GenericParameterCount%3D2) ParameterIdentifier%3D0"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="0bab8718-fa81-412b-8922-6948f00d8229"
+                    name="TVertex"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+              <classifierTemplateParameter
+                Id="4c4bb084-ece9-4c7f-bce3-7502a424c01f">
+                <referencesInternal>
+                  <reference
+                    Id="7ddc3429-09dc-43c5-89a6-77fb28820300"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2Fpackages%2FQuickGraph.3.6.61119.7%2Flib%2Fnet4%2FQuickGraph.dll Namespace%3DQuickGraph Type%3D(Name%3DUndirectedGraph GenericParameterCount%3D2) ParameterIdentifier%3D1"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="5f19a89b-3e90-4b18-b384-9fbdaf6e9c5e"
+                    name="TEdge"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

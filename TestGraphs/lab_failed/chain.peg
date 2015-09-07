@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<graph>
+  <vertices>
+    <vertex ID="1" Performance="1" />
+    <vertex ID="2" Performance="1" />
+    <vertex ID="3" Performance="1" />
+    <vertex ID="4" Performance="1" />
+  </vertices>
+  <edges>
+    <edge Source="0" Target="1">
+      <label Weight="1" />
+    </edge>
+    <edge Source="1" Target="2">
+      <label Weight="1" />
+    </edge>
+    <edge Source="2" Target="3">
+      <label Weight="1" />
+    </edge>
+  </edges>
+  <layout>
+    <position X="21" Y="196.07999999999998" />
+    <position X="149" Y="194.07999999999998" />
+    <position X="275" Y="194.07999999999998" />
+    <position X="404" Y="195.07999999999998" />
+  </layout>
+</graph>

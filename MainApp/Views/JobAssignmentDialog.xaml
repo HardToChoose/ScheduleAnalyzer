@@ -1,0 +1,172 @@
+﻿<Window
+    x:Class="MainApp.Views.JobAssignmentDialog"
+    x:Name="JobDialog"
+    
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+    xmlns:pi="clr-namespace:Microsoft.Practices.Prism.Interactivity.InteractionRequest;assembly=Microsoft.Practices.Prism.Interactivity"
+    
+    Title="Параметри планування"
+    
+    BorderThickness="0"
+    WindowStyle="ToolWindow"
+    
+    FocusManager.FocusedElement="{Binding ElementName=DefaultPhysicalLinks}"
+    
+    ResizeMode="NoResize"
+    SizeToContent="WidthAndHeight"
+    WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock
+            Grid.Row="0"
+            Grid.Column="0"
+            
+            Margin="8,8,8,0"
+            Text="Контролери I/O:"/>
+        <CheckBox
+            Grid.Row="0"
+            Grid.Column="1"
+            
+            VerticalAlignment="Center"
+            IsChecked="{Binding IoControllerPresent}" />
+
+        <TextBlock
+            Grid.Row="1"
+            Grid.Column="0"
+            
+            Margin="8,8,8,0"
+            Text="Дуплексність зв'язків:"/>
+        <CheckBox
+            Grid.Row="1"
+            Grid.Column="1"
+            
+            VerticalAlignment="Center"
+            IsChecked="{Binding DuplexTransfer}" />
+
+        <TextBlock
+            Grid.Row="2"
+            Grid.Column="0"
+            
+            Margin="8,8,8,0"
+            Text="Фізичних лінків (за замовч.):"/>
+        <TextBox
+            x:Name="DefaultPhysicalLinks"
+            
+            Grid.Row="2"
+            Grid.Column="1"
+            
+            MinWidth="40"
+            Margin="0,8,8,0"            
+            Text="{Binding DefaultLinkCount, ElementName=JobDialog, UpdateSourceTrigger=PropertyChanged}" />
+        
+        <DataGrid
+            x:Name="LinksTable"
+            
+            Grid.Row="3"
+            Grid.ColumnSpan="2"
+            Margin="8,8,8,0"
+            
+            BorderThickness="1"
+            Style="{StaticResource InfoDataGridStyle}">
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                    Header="Процесор"
+                    Binding="{Binding Proc.ID, Mode=OneTime}"
+                    
+                    IsReadOnly="True">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="HorizontalAlignment" Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                
+                <DataGridTextColumn
+                    Header="Кількість фізичних лінків"                    
+                    Binding="{Binding Links}">
+
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="TextAlignment" Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                    <DataGridTextColumn.EditingElementStyle>
+                        <Style TargetType="TextBox">
+                            <Setter Property="BorderThickness" Value="0" />
+                            <Setter Property="HorizontalContentAlignment" Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.EditingElementStyle>
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+            
+            <DataGrid.CellStyle>
+                <Style TargetType="DataGridCell">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="DataGridCell">
+                                <Border
+                                    BorderBrush="{TemplateBinding BorderBrush}" 
+                                    BorderThickness="{TemplateBinding BorderThickness}" 
+                                    Background="{TemplateBinding Background}"
+                                    SnapsToDevicePixels="True">
+                                    <ContentPresenter
+                                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                        HorizontalAlignment="Stretch" />
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+
+                    <Setter Property="Foreground" Value="Black" />
+                    <Setter Property="Margin" Value="0,0,-1,0" />
+
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="{x:Null}" />
+                            <Setter Property="BorderBrush" Value="{x:Null}" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.CellStyle>
+        </DataGrid>
+
+        <StackPanel
+            Grid.Row="4"
+            Grid.ColumnSpan="2"
+            
+            Orientation="Horizontal"
+            HorizontalAlignment="Center">
+            <Button
+                Content="OК"
+                IsDefault="True"
+                Click="OK_Button_Click"
+            
+                Padding="3"
+                Margin="8,10,0,8"
+                Width="60" />
+            <Button
+                Content="Нє"
+                IsCancel="True"
+                Click="Cancel_Button_Click"
+            
+                Padding="3"
+                Margin="8,10,8,8"
+                Width="60"/>
+        </StackPanel>
+    </Grid>
+</Window>

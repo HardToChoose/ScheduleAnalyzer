@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="f3422a06-5062-44de-bf46-b8b82d3387e5"
+  name="Simulation"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="77b75bfa-1ac6-4056-ab3a-b204ebbf6544"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DTaskPlanning.JobAssignment.Simulation"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="726dbced-316f-4598-8a32-a44729e708d9"
+        name="OperationInfo"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="47fa04a8-765e-4d69-aef0-5c1d9f9c03bc"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FE:%2FScheduleAnalyzer%2FTaskPlanning%2Fbin%2FRelease%2FTaskPlanning.dll Namespace%3DTaskPlanning.JobAssignment.Simulation Type%3DOperationInfo"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="fcc4e215-7a8c-4be0-9fee-591221669474"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="550bc2cd-2b36-41d3-9a26-361f59a96bf6">
+                <propertyInstance
+                  Id="07067002-23bd-40fc-9088-bde945c1aaf7"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0bac7b66-f8e1-40df-bf02-891bc12e0119">
+                <propertyInstance
+                  Id="c7e40b41-4d78-4c72-b689-449ef1089107"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ee04267a-bab0-4b66-82ea-4afa9265ff0b">
+                <propertyInstance
+                  Id="1eb7e6d0-dfa7-4611-be0c-3791ffbf623a"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="90602aa1-d124-418e-86da-1bfb8b90c36e">
+                <propertyInstance
+                  Id="17107bec-7c4a-4f5e-afc8-5a67ca299131"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2e24f2b6-1e82-451a-8161-46b97159d92f">
+                <propertyInstance
+                  Id="32828430-98d2-4ddf-bc61-ab12143858fc"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="1318e923-5f1d-47aa-8dee-d6c2f65a3347"
+        LastKnownName="Helpers"
+        LastKnownLocation="Package4_1938.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
